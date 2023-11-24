@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import { Roboto, Gabriela } from "next/font/google";
 import "./globals.css";
 
-export const roboto = Roboto({
+const roboto = Roboto({
   weight: "400",
   variable: "--font-roboto",
   subsets: ["latin"],
 });
-export const gabriela = Gabriela({
+const gabriela = Gabriela({
   weight: "400",
   variable: "--font-gabriela",
   subsets: ["latin"],
