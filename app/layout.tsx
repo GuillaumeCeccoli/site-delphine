@@ -1,8 +1,17 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Roboto, Gabriela } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const roboto = Roboto({
+  weight: "400",
+  variable: "--font-roboto",
+  subsets: ["latin"],
+});
+const gabriela = Gabriela({
+  weight: "400",
+  variable: "--font-gabriela",
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "Delphine Ceccoli - Psychologue",
@@ -17,7 +26,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fr-FR">
-      <body className={inter.className}>{children}</body>
+      <body className={`${roboto.variable} ${gabriela.variable}`}>
+        {children}
+      </body>
     </html>
   );
 }
