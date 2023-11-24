@@ -49,20 +49,26 @@ function Header() {
         </Link>
       </div>
       <section className="w-1/2 mr-3 md:w-1/5 2xl:w-[13%] 2xl:mr-20 md:mr-10">
-        <div className="flex flex-row justify-between">
-          <Image
-            src="/icons/Doctolib.svg"
-            alt="Doctolib"
-            width={50}
-            height={50}
-          />
-          <Image
-            src="/icons/Linkedin.svg"
-            alt="Linkedin"
-            width={50}
-            height={50}
-          />
-          <Image src="/icons/Mail.svg" alt="Mail" width={50} height={50} />
+        <div className="flex flex-row justify-between items-center">
+          <Link href="/">
+            <Image
+              src="/icons/Doctolib.svg"
+              alt="Doctolib"
+              width={50}
+              height={50}
+            />
+          </Link>
+          <Link href="/">
+            <Image
+              src="/icons/Linkedin.svg"
+              alt="Linkedin"
+              width={50}
+              height={50}
+            />
+          </Link>
+          <Link href="/">
+            <Image src="/icons/Mail.svg" alt="Mail" width={50} height={50} />
+          </Link>
         </div>
       </section>
     </header>
