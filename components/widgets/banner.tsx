@@ -37,7 +37,7 @@ export default function Banner() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
   return (
-    <section className="flex items-center flex-col w-full h-[400px] bg-[#F9F3EB] md:flex-row md:justify-between xl:flex-row xl:justify-between lg:h-[500px] xl:items-start xl:overflow-hidden">
+    <section className="flex items-center flex-col w-full h-[400px] backgroundLightGrey md:flex-row md:justify-between xl:flex-row xl:justify-between lg:h-[500px] xl:items-start xl:overflow-hidden">
       <div className="hidden xl:block xl:relative xl:top-20 left-[5%]">
         <Image src="/icons/Arbre.svg" alt="Un arbre" width={380} height={436} />
       </div>

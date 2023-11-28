@@ -6,6 +6,8 @@
   :root {
     --background: 0 0% 100%;
     --foreground: 0 0% 3.9%;
+    --pink: #f5cecb;
+    --light-gray: #fffdfa;
 
     --card: 0 0% 100%;
     --card-foreground: 0 0% 3.9%;
@@ -63,6 +65,12 @@
     --border: 0 0% 14.9%;
     --input: 0 0% 14.9%;
     --ring: 0 0% 83.1%;
+  }
+  .backgroundPink {
+    background-color: var(--pink);
+  }
+  .backgroundLightGrey {
+    background-color: var(--light-gray);
   }
 }
 

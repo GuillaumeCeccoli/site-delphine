@@ -15,13 +15,13 @@ import { useLinks } from "./useLinks";
 export default function Header() {
   const { links, socialLinks } = useLinks();
   return (
-    <header className="flex flex-row justify-between items-center bg-[#F3DAD8] h-[100px] relative">
+    <header className="flex flex-row justify-between items-center backgroundPink h-[100px] relative">
       <div className="md:hidden">
         <Sheet>
           <SheetTrigger>
             <Menu color="black" size={50} className="m-2" />
           </SheetTrigger>
-          <SheetContent className="absolute left-0 top-0 h-[200px] w-full bg-[#F3DAD8]">
+          <SheetContent className="absolute left-0 top-0 h-[200px] w-full backgroundPink">
             <SheetHeader>
               <SheetDescription className="flex flex-col items-start">
                 {links.map((link, index) => (
