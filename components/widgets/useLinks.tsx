@@ -1,5 +1,4 @@
-import linksData from "@/data/links.json";
-import socialLinksData from "@/data/socialLinks.json";
+import { headerLinks, socialLinksData } from "../../data/links";
 
 export type Link = {
   name: string;
@@ -7,7 +6,7 @@ export type Link = {
   src?: string;
 };
 export function useLinks() {
-  const links = linksData as Link[];
+  const links = headerLinks as Link[];
   const socialLinks = socialLinksData as Link[];
   return { links, socialLinks };
 }
