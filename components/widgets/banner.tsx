@@ -33,6 +33,7 @@ export default function Banner() {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 1024);
     };
+    handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
@@ -57,7 +58,7 @@ export default function Banner() {
             alt={photo.alt}
             width={isMobile ? photo.width : photo.width * 2}
             height={isMobile ? photo.height : photo.height * 2}
-            className={photo.className}
+            className={`imageClass ${photo.className}`}
           />
         ))}
       </div>

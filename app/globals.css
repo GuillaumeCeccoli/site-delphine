@@ -72,6 +72,16 @@
   .backgroundLightGrey {
     background-color: var(--light-gray);
   }
+  .imageClass {
+    width: 127px;
+    height: 175px;
+  }
+  @media (min-width: 1024px) {
+    .imageClass {
+      width: 254px;
+      height: 350px;
+    }
+  }
 }
 
 @layer base {
