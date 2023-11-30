@@ -81,8 +81,10 @@ export default function Contact() {
   };
   return (
     <section className="backgroundPink">
-      <div className="flex flex-col items-center">
-        <h2 className="underline font-serif text-3xl mt-10">Contact</h2>
+      <h2 className="underline font-serif text-3xl pt-10 text-center">
+        Contact
+      </h2>
+      <div className="flex flex-col items-center md:flex-row">
         <Image
           src="/imgs/photo-contact.png"
           alt="Un bureau avec une chaise"
@@ -90,7 +92,7 @@ export default function Contact() {
           height={370}
           className="mt-16"
         />
-        <div className="w-11/12 font-sans my-16">
+        <div className="w-11/12 font-sans my-16 md:w-3/6">
           <Form {...form} /* onSubmit={form.handleSubmit(onSubmit)} */>
             <FormFieldComponent
               control={form.control}
