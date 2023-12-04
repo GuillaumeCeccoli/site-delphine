@@ -40,7 +40,11 @@ export default function Header() {
       </div>
       <div className="hidden md:flex md:flex-row md:items-center justify-between md:w-2/4 md:m-10 md:text-xl xl:w-1/3 2xl:w-1/4 2xl:ml-20">
         {links.map((link, index) => (
-          <Link key={index} href={link.href} className="mx-5 font-sans">
+          <Link
+            key={index}
+            href={link.href}
+            className="mx-5 font-sans underline-from-center scale-on-hover"
+          >
             {link.name}
           </Link>
         ))}
@@ -48,7 +52,7 @@ export default function Header() {
       <section className="w-2/5 mr-3 md:w-1/5 2xl:w-[13%] 2xl:mr-20 md:mr-10">
         <div className="flex flex-row justify-between items-center">
           {socialLinks.map((link, index) => (
-            <Link key={index} href={link.href}>
+            <Link key={index} href={link.href} className="scale-on-hover">
               {link.src ? (
                 <Image src={link.src} alt={link.name} width={40} height={40} />
               ) : null}

@@ -17,6 +17,7 @@ import { Input } from "../ui/input";
 import { Textarea } from "../ui/textarea";
 import { Control } from "react-hook-form";
 import { Button } from "../ui/button";
+import { useState, useEffect } from "react";
 
 const formSchema = z.object({
   username: z
@@ -79,20 +80,29 @@ export default function Contact() {
   const onSubmit = () => {
     console.log(form.getValues());
   };
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 1024);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
   return (
     <section className="backgroundPink">
-      <h2 className="underline font-serif text-3xl pt-10 text-center">
+      <h2 className="underline font-serif text-3xl pt-10 text-center lg:ml-20 xl:ml-40 xl:text-4xl">
         Contact
       </h2>
-      <div className="flex flex-col items-center md:flex-row">
+      <div className="flex flex-col items-center md:flex-row md:justify-between md:items-center md:mx-10 lg:mx-20 2xl:mx-60">
         <Image
           src="/imgs/photo-contact.png"
           alt="Un bureau avec une chaise"
-          width={246}
-          height={370}
-          className="mt-16"
+          width={isMobile ? 246 : 400}
+          height={isMobile ? 370 : 600}
+          className="mt-16 md:mb-40"
         />
-        <div className="w-11/12 font-sans my-16 md:w-3/6">
+        <div className="w-11/12 font-sans my-16 sm:w-4/6 md:w-3/5 md:my-10 lg:w-2/4 xl:text-lg">
           <Form {...form} /* onSubmit={form.handleSubmit(onSubmit)} */>
             <FormFieldComponent
               control={form.control}
@@ -119,7 +129,7 @@ export default function Contact() {
                 <FormItem>
                   <FormLabel>Message</FormLabel>
                   <FormControl>
-                    <Textarea placeholder="Message" {...field} rows={5} />
+                    <Textarea placeholder="Message" {...field} rows={10} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>

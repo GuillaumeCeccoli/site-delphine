@@ -82,6 +82,50 @@
       height: 350px;
     }
   }
+  .underline-from-center {
+    position: relative;
+  }
+
+  .underline-from-center::before,
+  .underline-from-center::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    background: currentColor;
+    transition: width 0.3s ease-in-out;
+  }
+
+  .underline-from-center::before {
+    left: 50%;
+  }
+
+  .underline-from-center::after {
+    right: 50%;
+  }
+
+  .underline-from-center:hover::before,
+  .underline-from-center:hover::after {
+    width: 50%;
+  }
+  .scale-on-hover {
+    transition: transform 0.2s ease-in-out;
+  }
+  .scale-on-hover:hover {
+    transform: scale(1.2);
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  .on-click-icon.active {
+    animation: fadeIn 0.5s ease-in-out;
+  }
 }
 
 @layer base {
