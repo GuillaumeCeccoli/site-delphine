@@ -38,7 +38,7 @@ export default function Header() {
           </SheetContent>
         </Sheet>
       </div>
-      <div className="hidden md:flex md:flex-row md:items-center justify-between md:w-2/4 md:m-10 md:text-xl xl:w-1/3 2xl:w-1/4 2xl:ml-20">
+      <div className="hidden md:flex md:flex-row md:items-center justify-between md:w-3/5 md:m-10 md:text-xl xl:w-2/5 2xl:w-1/4 2xl:ml-20">
         {links.map((link, index) => (
           <Link
             key={index}

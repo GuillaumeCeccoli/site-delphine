@@ -126,6 +126,12 @@
   .on-click-icon.active {
     animation: fadeIn 0.5s ease-in-out;
   }
+  .backgroundAboutPractice {
+    background-image: url("/imgs/BGpratiquedesktop.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left 65%;
+  }
 }
 
 @layer base {

@@ -5,12 +5,16 @@ export type Links = {
 
 export const headerLinks: Links[] = [
   {
-    name: "A propos",
+    name: "Accueil",
     href: "/",
   },
   {
+    name: "A propos",
+    href: "/About",
+  },
+  {
     name: "Ma pratique",
-    href: "/",
+    href: "/Practice",
   },
   {
     name: "Blog",
