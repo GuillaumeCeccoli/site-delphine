@@ -49,14 +49,14 @@ export default function Activities() {
                   className="py-2"
                   title="Cliquez pour en savoir plus"
                 />
-                <h2 className="text-2xl font-serif text-center py-5 md:text-2xl">
+                <h2 className="font-serif text-center py-5 text-2xl">
                   {action.title}
                 </h2>
                 {selectedActions.includes(action.id) && (
                   <p
                     className={`on-click-icon ${
                       isClicked[action.id] ? "active" : ""
-                    } text-lg text-center font-sans xl:mb-5`}
+                    } text-base text-center font-sans xl:mb-5`}
                   >
                     {action.description}
                   </p>

@@ -45,8 +45,8 @@ export default function Practice() {
           <h2 className="font-serif text-2xl my-20 underline text-center z-10 lg:text-3xl">
             Une approche centrée sur la personne
           </h2>
-          <div className="font-sans bg-[#EFEFEF] bg-opacity-40 rounded-3xl sm:w-4/5 md:mb-20 lg:mb-40 lg:w-3/5 z-10">
-            <div className="w-11/12 m-auto px-2 py-8 text-sm lg:text-base">
+          <div className="mb-10 font-sans bg-[#EFEFEF] bg-opacity-40 rounded-3xl sm:w-4/5 md:mb-20 lg:mb-40 lg:w-3/5 z-10">
+            <div className="w-11/12 mx-auto px-2 py-8 text-sm lg:text-base">
               <p className="mb-5">
                 Pendant mon cursus universitaire et au cours de mes diverses
                 expériences professionnelles j’ai été sensibilisée à l’Approche
