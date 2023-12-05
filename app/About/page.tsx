@@ -43,7 +43,7 @@ export default function About() {
         </article>
         <article className="flex flex-col items-center backgroundPink lg:bg-transparent xl:flex-row xl:justify-between items-centers xl:mx-5 xl:pb-40">
           <div className="font-sans bg-[#EFEFEF] bg-opacity-40 my-10 rounded-3xl sm:w-4/5 md:mb-20 lg:mb-10 lg:w-3/5 z-10 xl:mx-5">
-            <div className="w-11/12 m-auto px-2 py-8 text-sm lg:text-base xl:text-xl xl:h-[520px] flex items-center">
+            <div className="w-11/12 m-auto px-2 py-8 text-sm lg:text-base xl:h-[520px] flex items-center">
               <p>
                 Psychologue d&apos;approche humaniste, ma mission est de vous
                 proposer un espace d&apos;accueil, d&apos;écoute et
@@ -66,7 +66,7 @@ export default function About() {
             </div>
           </div>
           <div className="font-sans bg-[#EFEFEF] bg-opacity-40 my-10 rounded-3xl sm:w-4/5 md:mb-20 lg:mb-10 lg:w-3/5 z-10">
-            <div className="w-11/12 m-auto px-2 py-8 text-sm lg:text-base xl:text-xl  xl:h-[520px] flex items-center">
+            <div className="w-11/12 m-auto px-2 py-8 text-sm lg:text-base xl:h-[520px] flex items-center">
               <p>
                 Ayant principalement évolué en addictologie et en psychiatrie
                 générale, j&apos;ai été amenée à accompagner des personnes (les
@@ -85,7 +85,7 @@ export default function About() {
             </div>
           </div>
           <div className="font-sans bg-[#EFEFEF] bg-opacity-40 my-10 rounded-3xl sm:w-4/5 md:mb-20 lg:mb-10 lg:w-3/5 z-10 xl:mx-5">
-            <div className="w-11/12 m-auto px-2 py-8 text-sm lg:text-base xl:text-xl  xl:h-[520px] flex items-center">
+            <div className="w-11/12 m-auto px-2 py-8 text-sm lg:text-base xl:h-[520px] flex items-center">
               <p>
                 Installée en libéral depuis septembre 2020 aux Pennes-Mirabeau,
                 je collabore avec différents professionnels du paramédical
