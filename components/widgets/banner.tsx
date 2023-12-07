@@ -43,10 +43,10 @@ export default function Banner() {
         <Image src="/icons/Arbre.svg" alt="Un arbre" width={380} height={436} />
       </div>
       <div className="flex items-center flex-col mt-6 justify-center md:ml-16 xl:mt-40 xl:mr-40">
-        <h1 className="text-2xl font-serif lg:text-3xl 2xl:text-5xl">
+        <h1 className="text-2xl font-serif lg:text-3xl 2xl:text-4xl">
           Delphine Ceccoli
         </h1>
-        <h2 className="font-sans italic mt-5 text-xl lg:text-2xl 2xl:text-4xl">
+        <h2 className="font-sans italic mt-5 text-xl lg:text-2xl">
           Psychologue aux Pennes-Mirabeau
         </h2>
       </div>
