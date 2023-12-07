@@ -46,13 +46,13 @@ export default function Approach() {
           </div>
         </div>
       </div>
-      <div className="hidden 2xl:block">
+      <div className="hidden xl:block">
         <Image
           src="/icons/Arbre.svg"
           alt="Un arbre"
           width={380}
           height={436}
-          className="2xl:absolute xl:bottom-0 2xl:right-12"
+          className="xl:absolute xl:bottom-0 xl:right-12"
         />
       </div>
     </section>
