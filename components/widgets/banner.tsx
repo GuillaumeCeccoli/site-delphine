@@ -16,14 +16,14 @@ const photos: Photo[] = [
     alt: "Une jolie brune pensive",
     width: 127,
     height: 175,
-    className: "relative top-10 right-14 z-10",
+    className: "relative top-10 right-12 z-10",
   },
   {
     src: "/imgs/jolieblonde.png",
     alt: "Une jolie blonde derrière son bureau",
     width: 127,
     height: 175,
-    className: "absolute top-20 left-16",
+    className: "absolute top-20 left-14",
   },
 ];
 
