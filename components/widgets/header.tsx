@@ -38,12 +38,12 @@ export default function Header() {
           </SheetContent>
         </Sheet>
       </div>
-      <div className="hidden md:flex md:flex-row md:items-center justify-between md:w-3/5 md:m-10 md:text-xl xl:w-2/5 2xl:w-1/4 2xl:ml-20">
+      <div className="hidden md:flex md:flex-row md:items-center justify-between md:w-2/4 md:m-10 md:text-xl xl:w-2/5 2xl:w-1/4 2xl:ml-20">
         {links.map((link, index) => (
           <Link
             key={index}
             href={link.href}
-            className="mx-5 font-sans underline-from-center scale-on-hover"
+            className="font-sans underline-from-center scale-on-hover"
           >
             {link.name}
           </Link>
