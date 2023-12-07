@@ -16,7 +16,7 @@ const photos: Photo[] = [
     alt: "Une jolie brune pensive",
     width: 127,
     height: 175,
-    className: "relative top-10 right-12 z-10",
+    className: "relative top-10 right-16 z-10",
   },
   {
     src: "/imgs/jolieblonde.png",
