@@ -16,14 +16,14 @@ const photos: Photo[] = [
     alt: "Une jolie brune pensive",
     width: 127,
     height: 175,
-    className: "relative top-10 right-12 z-10",
+    className: "relative top-10 right-14 z-10",
   },
   {
     src: "/imgs/jolieblonde.png",
     alt: "Une jolie blonde derrière son bureau",
     width: 127,
     height: 175,
-    className: "absolute top-20 left-14 ",
+    className: "absolute top-20 left-16",
   },
 ];
 
@@ -42,15 +42,15 @@ export default function Banner() {
       <div className="hidden xl:block xl:relative xl:top-20 left-[5%]">
         <Image src="/icons/Arbre.svg" alt="Un arbre" width={380} height={436} />
       </div>
-      <div className="flex items-center flex-col mt-6 justify-center md:ml-16 xl:mt-40 xl:mr-20 2xl:mr-40">
+      <div className="flex items-center flex-col mt-6 justify-center md:ml-16 xl:mt-40 xl:mr-40">
         <h1 className="text-2xl font-serif lg:text-3xl 2xl:text-5xl">
           Delphine Ceccoli
         </h1>
-        <h2 className="font-sans italic mt-[25px] text-xl lg:text-2xl 2xl:text-4xl">
+        <h2 className="font-sans italic mt-5 text-xl lg:text-2xl 2xl:text-4xl">
           Psychologue aux Pennes-Mirabeau
         </h2>
       </div>
-      <div className="relative md:right-[10%] md:bottom-[12%] xl:top-6 xl:right-20 2xl:right-40">
+      <div className="relative md:right-[10%] md:bottom-[12%] xl:top-6 xl:right-24 2xl:right-40">
         {photos.map((photo, index) => (
           <Image
             key={index}

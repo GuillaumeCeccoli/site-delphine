@@ -22,13 +22,13 @@ export default function Activities() {
   return (
     <section className="backgroundPink">
       <div className="flex flex-col justify-center">
-        <h1 className="font-serif text-xl underline pt-10 text-center md:text-3xl">
+        <h1 className="font-serif text-2xl underline pt-10 text-center">
           Mes champs d&apos; interventions
         </h1>
-        <p className="text-sm italic font-sans text-center pt-2 pb-5 lg:text-base">
+        <p className="text-sm italic font-sans text-center py-2 lg:text-base">
           Cliquez sur les icones pour en savoir plus
         </p>
-        <article className="flex flex-col items-center w-[95%] mx-auto md:flex-row md:items-start md:justify-between md:flex-wrap xl:flex-nowrap xl:p-0">
+        <article className="flex flex-col items-center md:flex-row md:items-start md:justify-around md:flex-wrap xl:flex-nowrap xl:p-0 xl:my-2">
           {actions.map((action) => (
             <Card
               key={action.id}
@@ -44,8 +44,8 @@ export default function Activities() {
                 <Image
                   src={action.icon}
                   alt={action.title}
-                  width={90}
-                  height={90}
+                  width={80}
+                  height={80}
                   className="py-2"
                   title="Cliquez pour en savoir plus"
                 />
@@ -53,13 +53,15 @@ export default function Activities() {
                   {action.title}
                 </h2>
                 {selectedActions.includes(action.id) && (
-                  <p
-                    className={`on-click-icon ${
-                      isClicked[action.id] ? "active" : ""
-                    } text-base text-center font-sans xl:mb-5`}
-                  >
-                    {action.description}
-                  </p>
+                  <div className="bg-[#FAFAFA] bg-opacity-25 text-center p-4 rounded-xl">
+                    <p
+                      className={`on-click-icon ${
+                        isClicked[action.id] ? "active" : ""
+                      } text-[14px] font-sans`}
+                    >
+                      {action.description}
+                    </p>
+                  </div>
                 )}
               </CardContent>
             </Card>

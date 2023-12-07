@@ -21,7 +21,7 @@ export default function Header() {
           <SheetTrigger>
             <Menu color="black" size={50} className="m-2" />
           </SheetTrigger>
-          <SheetContent className="absolute left-0 top-0 h-[200px] w-full backgroundPink">
+          <SheetContent className="absolute right-0 top-0 h-[220px] w-3/5 backgroundPink">
             <SheetHeader>
               <SheetDescription className="flex flex-col items-start">
                 {links.map((link, index) => (

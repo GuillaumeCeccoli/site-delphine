@@ -30,7 +30,7 @@ function Footer() {
             <h3 className="font-serif underline text-xl">Liens utiles</h3>
             <div className="flex flex-col font-sans my-4 md:w-3/4">
               <Link href="/">Mentions légales</Link>
-              <Link href="/">Politique de confidentialité</Link>
+              <Link href="/">Confidentialité</Link>
             </div>
           </div>
         </div>
