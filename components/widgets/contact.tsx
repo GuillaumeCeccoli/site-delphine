@@ -77,8 +77,35 @@ export default function Contact() {
       phone: "",
     },
   });
-  const onSubmit = () => {
-    console.log(form.getValues());
+  const onSubmit = async () => {
+    const values = form.getValues();
+
+    try {
+      const response = await fetch("/api/contactData", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
+      });
+
+      if (!response.ok) {
+        throw new Error("Error sending email");
+      }
+
+      form.reset({
+        username: "",
+        email: "",
+        message: "",
+        phone: "",
+      });
+
+      alert("Votre message a bien été envoyé");
+
+      console.log("Email sent");
+    } catch (error) {
+      console.error(error);
+    }
   };
   const [isMobile, setIsMobile] = useState(false);
   useEffect(() => {
@@ -102,8 +129,11 @@ export default function Contact() {
           height={isMobile ? 370 : 600}
           className="mt-16 md:mb-40"
         />
-        <div className="w-11/12 font-sans my-16 sm:w-4/6 md:w-3/5 md:my-10 lg:w-2/4 xl:text-lg">
-          <Form {...form} /* onSubmit={form.handleSubmit(onSubmit)} */>
+        <div
+          onSubmit={form.handleSubmit(onSubmit)}
+          className="w-11/12 font-sans my-16 sm:w-4/6 md:w-3/5 md:my-10 lg:w-2/4 xl:text-lg"
+        >
+          <Form {...form}>
             <FormFieldComponent
               control={form.control}
               name="username"
@@ -138,7 +168,8 @@ export default function Contact() {
           </Form>
           <div className="flex justify-center">
             <Button
-              className="my-10 font-sans w-2/5 h-10 bg-gray-100 text-black hover:bg-gray-300" /* onClick={form.handleSubmit(onSubmit)} */
+              className="my-10 font-sans w-2/5 h-10 bg-gray-100 text-black hover:bg-gray-300"
+              onClick={form.handleSubmit(onSubmit)}
             >
               Envoyer
             </Button>

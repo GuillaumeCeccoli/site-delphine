@@ -16,7 +16,7 @@ export default function Approach() {
           Une approche humaniste
         </h2>
         <div className="mb-16 md:w-4/5 2xl:w-11/12 z-10 bg-[#FAFAFA] bg-opacity-25 p-8 rounded-3xl">
-          <div className="font-sans xl:m-auto 2xl:text-base">
+          <div className="font-sans xl:m-auto xl:text-xl">
             <p>
               Ma pratique s’inscrit dans une approche existentielle-humaniste.
               Cette orientation part du postulat que tout individu porte en
