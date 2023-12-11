@@ -14,8 +14,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const { username, email, phone, message } = req.body;
 
     const msg = {
-      to: 'delphine.ceccoli@laposte.net',
-      from: 'guiceccoli@gmail.com',
+      to: 'guiceccoli@gmail.com',
+      from: 'gceccoli@proton.me',
       subject: 'Un patient viens de vous écrire',
       text: `Name: ${username}\nEmail: ${email}\nPhone: ${phone}\nMessage: ${message}`,
     };
