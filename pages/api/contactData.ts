@@ -2,8 +2,10 @@ import { NextApiRequest, NextApiResponse } from 'next';
 import sgMail from '@sendgrid/mail';
 
 const SENDGRID_API_KEY = process.env.SENDGRID_API_KEY;
+const MAILTO = process.env.MAILTO;
+const MAILFROM = process.env.MAILFROM;
 
-if (!SENDGRID_API_KEY) {
+if (!SENDGRID_API_KEY || !MAILTO || !MAILFROM) {
   throw new Error('Please define the SENDGRID_API_KEY environment variable');
 }
 
@@ -14,8 +16,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const { username, email, phone, message } = req.body;
 
     const msg = {
-      to: 'guiceccoli@gmail.com',
-      from: 'gceccoli@proton.me',
+      to: MAILTO,
+      from: MAILFROM,
       subject: 'Un patient viens de vous écrire',
       text: `Name: ${username}\nEmail: ${email}\nPhone: ${phone}\nMessage: ${message}`,
     };
