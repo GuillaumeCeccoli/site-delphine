@@ -16,9 +16,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const { username, email, phone, message } = req.body;
 
     const msg = {
-      to: MAILTO,
-      from: MAILFROM,
-      subject: 'Un patient viens de vous écrire',
+      to: MAILTO as string,
+      from: MAILFROM as string,
+      subject: 'Un patient vient de vous écrire',
       text: `Name: ${username}\nEmail: ${email}\nPhone: ${phone}\nMessage: ${message}`,
     };
 

@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import * as z from "zod";
-import { useForm } from "react-hook-form";
+import { useForm, Control } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import {
   Form,
@@ -15,7 +15,6 @@ import {
 } from "@/components/ui/form";
 import { Input } from "../ui/input";
 import { Textarea } from "../ui/textarea";
-import { Control } from "react-hook-form";
 import { Button } from "../ui/button";
 import { useState, useEffect } from "react";
 
@@ -28,7 +27,7 @@ const formSchema = z.object({
   message: z
     .string()
     .min(10, { message: "Trop court" })
-    .max(500, { message: "Trop long" }),
+    .max(3000, { message: "Trop long" }),
   phone: z
     .string()
     .length(10, {
@@ -129,51 +128,50 @@ export default function Contact() {
           height={isMobile ? 370 : 600}
           className="mt-16 md:mb-40"
         />
-        <div
-          onSubmit={form.handleSubmit(onSubmit)}
-          className="w-11/12 font-sans my-16 sm:w-4/6 md:w-3/5 md:my-10 lg:w-2/4 xl:text-lg"
-        >
-          <Form {...form}>
-            <FormFieldComponent
-              control={form.control}
-              name="username"
-              label="Nom"
-              placeholder="Nom"
-            />
-            <FormFieldComponent
-              control={form.control}
-              name="email"
-              label="Email"
-              placeholder="Email"
-            />
-            <FormFieldComponent
-              control={form.control}
-              name="phone"
-              label="Téléphone"
-              placeholder="Téléphone"
-            />
-            <FormField
-              control={form.control}
-              name="message"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Message</FormLabel>
-                  <FormControl>
-                    <Textarea placeholder="Message" {...field} rows={10} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-          </Form>
-          <div className="flex justify-center">
-            <Button
-              className="my-10 font-sans w-2/5 h-10 bg-gray-100 text-black hover:bg-gray-300"
-              onClick={form.handleSubmit(onSubmit)}
-            >
-              Envoyer
-            </Button>
-          </div>
+        <div className="w-11/12 font-sans my-16 sm:w-4/6 md:w-3/5 md:my-10 lg:w-2/4 xl:text-lg">
+          <form onSubmit={form.handleSubmit(onSubmit)}>
+            <Form {...form}>
+              <FormFieldComponent
+                control={form.control}
+                name="username"
+                label="Nom"
+                placeholder="Nom"
+              />
+              <FormFieldComponent
+                control={form.control}
+                name="email"
+                label="Email"
+                placeholder="Email"
+              />
+              <FormFieldComponent
+                control={form.control}
+                name="phone"
+                label="Téléphone"
+                placeholder="Téléphone"
+              />
+              <FormField
+                control={form.control}
+                name="message"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Message</FormLabel>
+                    <FormControl>
+                      <Textarea placeholder="Message" {...field} rows={10} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+            </Form>
+            <div className="flex justify-center">
+              <Button
+                type="submit"
+                className="my-10 font-sans w-2/5 h-10 bg-gray-100 text-black hover:bg-gray-300"
+              >
+                Envoyer
+              </Button>
+            </div>
+          </form>
         </div>
       </div>
     </section>
