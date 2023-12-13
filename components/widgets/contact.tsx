@@ -17,6 +17,8 @@ import { Input } from "../ui/input";
 import { Textarea } from "../ui/textarea";
 import { Button } from "../ui/button";
 import { useState, useEffect } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const formSchema = z.object({
   username: z
@@ -99,11 +101,11 @@ export default function Contact() {
         phone: "",
       });
 
-      alert("Votre message a bien été envoyé");
-
-      console.log("Email sent");
+      toast(
+        "Votre mail a été envoyé avec succés, vous serez recontacté(e) rapidement. Merci !"
+      );
     } catch (error) {
-      console.error(error);
+      toast.error("Une erreur est survenue");
     }
   };
   const [isMobile, setIsMobile] = useState(false);
@@ -117,6 +119,7 @@ export default function Contact() {
   }, []);
   return (
     <section className="backgroundPink">
+      <ToastContainer />
       <h2 className="underline font-serif text-3xl pt-10 text-center lg:ml-20 xl:ml-40 xl:text-4xl">
         Contact
       </h2>
@@ -170,6 +173,9 @@ export default function Contact() {
               >
                 Envoyer
               </Button>
+            </div>
+            <div className="hidden" onSubmit={form.handleSubmit(onSubmit)}>
+              <p>Votre mail a bien été envoyé</p>
             </div>
           </form>
         </div>
