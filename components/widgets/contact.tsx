@@ -174,9 +174,6 @@ export default function Contact() {
                 Envoyer
               </Button>
             </div>
-            <div className="hidden" onSubmit={form.handleSubmit(onSubmit)}>
-              <p>Votre mail a bien été envoyé</p>
-            </div>
           </form>
         </div>
       </div>
