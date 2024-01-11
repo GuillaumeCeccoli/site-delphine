@@ -15,7 +15,7 @@ import { useLinks } from "./useLinks";
 export default function Header() {
   const { links, socialLinks } = useLinks();
   return (
-    <header className="flex flex-row justify-between items-center backgroundPink h-[100px] relative">
+    <header className="flex flex-row justify-between items-center backgroundPink h-[100px] relative border-b border-gray-400">
       <div className="md:hidden">
         <Sheet>
           <SheetTrigger>
@@ -54,7 +54,7 @@ export default function Header() {
           {socialLinks.map((link, index) => (
             <Link key={index} href={link.href} className="scale-on-hover">
               {link.src ? (
-                <Image src={link.src} alt={link.name} width={40} height={40} />
+                <Image src={link.src} alt={link.alt} width={40} height={40} />
               ) : null}
             </Link>
           ))}

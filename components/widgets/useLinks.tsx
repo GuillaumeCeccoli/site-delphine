@@ -4,6 +4,7 @@ export type Link = {
   name: string;
   href: string;
   src?: string;
+  alt: string;
 };
 export function useLinks() {
   const links = headerLinks as Link[];

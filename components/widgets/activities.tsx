@@ -20,12 +20,12 @@ export default function Activities() {
     setIsClicked((prevState) => ({ ...prevState, [id]: !prevState[id] }));
   };
   return (
-    <section className="backgroundPink">
+    <section className="backgroundPink py-10 border-b border-gray-400">
       <div className="flex flex-col justify-center">
-        <h1 className="font-serif text-2xl underline pt-10 text-center">
+        <h2 className="font-serif text-2xl text-center">
           Mes champs d&apos; interventions
-        </h1>
-        <p className="text-sm italic font-sans text-center py-2 lg:text-base">
+        </h2>
+        <p className="text-sm italic font-sans text-center pt-2 pb-10 lg:text-base">
           Cliquez sur les icones pour en savoir plus
         </p>
         <article className="flex flex-col items-center md:flex-row md:items-start md:justify-around md:flex-wrap xl:flex-nowrap xl:p-0 xl:my-2">

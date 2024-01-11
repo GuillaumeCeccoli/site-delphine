@@ -72,20 +72,15 @@
   .backgroundLightGrey {
     background-color: var(--light-gray);
   }
-  .imageClass {
-    width: 127px;
-    height: 175px;
-  }
-  @media (min-width: 1024px) {
-    .imageClass {
-      width: 254px;
-      height: 350px;
-    }
-  }
   .underline-from-center {
     position: relative;
   }
-
+  .shadowCustom {
+    box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.3);
+  }
+  .shadowCustonReverse {
+    box-shadow: -7px -7px 10px rgba(0, 0, 0, 0.3);
+  }
   .underline-from-center::before,
   .underline-from-center::after {
     content: "";

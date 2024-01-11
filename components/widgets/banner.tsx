@@ -12,18 +12,19 @@ type Photo = {
 
 const photos: Photo[] = [
   {
-    src: "/imgs/brune.png",
-    alt: "Une jolie brune pensive",
+    src: "/imgs/bannerDelphine.png",
+    alt: "Photo de Delphine Ceccoli entrain de sourire.",
     width: 127,
     height: 175,
-    className: "relative top-10 right-8 lg:right-16 z-10",
+    className:
+      "relative top-10 right-8 lg:right-16 2xl:right-24 z-10 shadowCustonReverse rounded-[43px]",
   },
   {
-    src: "/imgs/jolieblonde.png",
-    alt: "Une jolie blonde derrière son bureau",
+    src: "/imgs/bureauBanner.png",
+    alt: "Bureau de Delphine Ceccoli",
     width: 127,
     height: 175,
-    className: "absolute top-20 left-14 lg:left-20",
+    className: "absolute top-20 left-14 lg:left-20 rounded-[43px] shadowCustom",
   },
 ];
 
@@ -38,7 +39,7 @@ export default function Banner() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
   return (
-    <section className="flex items-center flex-col w-full h-[400px] backgroundLightGrey md:flex-row md:justify-between xl:flex-row xl:justify-between lg:h-[500px] xl:items-start xl:overflow-hidden">
+    <section className="flex items-center flex-col w-full h-[400px] backgroundLightGrey md:flex-row md:justify-between xl:flex-row xl:justify-between lg:h-[500px] xl:items-start xl:overflow-hidden border-b border-gray-400">
       <div className="hidden xl:block xl:relative xl:top-20 left-[5%]">
         <Image src="/icons/Arbre.svg" alt="Un arbre" width={380} height={436} />
       </div>

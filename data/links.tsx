@@ -16,16 +16,17 @@ export const headerLinks: Links[] = [
     name: "Ma pratique",
     href: "/Practice",
   },
-  {
+  /*   {
     name: "Blog",
     href: "/",
-  },
+  }, */
 ];
 
 export type SocialLinks = {
   name: string;
   href: string;
   src: string;
+  alt: string;
 };
 
 export const socialLinksData: SocialLinks[] = [
@@ -33,16 +34,19 @@ export const socialLinksData: SocialLinks[] = [
     name: "Doctolib",
     href: "https://www.doctolib.fr/psychologue/les-pennes-mirabeau/delphine-ceccoli",
     src: "/icons/Doctolib.svg",
+    alt: "Lien vers Doctolib",
   },
   {
     name: "Linkedin",
     href: "https://www.linkedin.com/in/delphine-ceccoli/?originalSubdomain=fr",
     src: "/icons/Linkedin.svg",
+    alt: "Lien vers Linkedin",
   },
   {
     name: "Mail",
-    href: "/",
+    href: "/Contact",
     src: "/icons/Mail.svg",
+    alt: "Lien vers Mail",
   },
 ];
 

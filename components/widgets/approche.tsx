@@ -3,19 +3,19 @@ import Image from "next/image";
 
 export default function Approach() {
   return (
-    <section className="w-full relative backgroundPink flex flex-col items-center justify-center xl:flex-row xl:justify-around overflow-hidden">
+    <section className="w-full relative backgroundPink flex flex-col items-center justify-center xl:flex-row-reverse xl:justify-around overflow-hidden border-b border-gray-400">
       <Image
-        src="/imgs/roundPhoto.png"
-        alt="Une photo"
+        src="/imgs/delphineTravail.png"
+        alt="Une photo de Delphine entrain de travailler."
         width={300}
         height={300}
-        className="flex flex-col my-10 xl:flex mx-20 xl:flex-shrink-0 xl:mt-10 2xl:ml-40"
+        className="flex flex-col mb-10 mt-20 2xl:mr-32 xl:mt-10 xl:mr-20 z-10 shadowCustom rounded-full"
       />
       <div className="flex flex-col items-center 2xl:items-start 2xl:mx-20">
-        <h2 className="underline font-serif text-2xl my-10 md:text-3xl xl:mr-80 2xl:mx-30">
+        <h2 className="font-serif text-2xl my-20 md:text-3xl xl:self-center xl:ml-96">
           Une approche humaniste
         </h2>
-        <div className="mb-16 md:w-4/5 2xl:w-11/12 z-10 bg-[#FAFAFA] bg-opacity-25 p-8 rounded-3xl">
+        <div className="mb-32 md:w-4/5 2xl:w-9/12 2xl:ml-20 z-10 bg-[#FAFAFA] bg-opacity-25 p-8 rounded-3xl shadowCustom">
           <div className="font-sans xl:m-auto xl:text-xl">
             <p>
               Ma pratique s’inscrit dans une approche existentielle-humaniste.
@@ -52,7 +52,7 @@ export default function Approach() {
           alt="Un arbre"
           width={380}
           height={436}
-          className="xl:absolute xl:bottom-0 xl:right-12"
+          className="xl:absolute xl:bottom-0 xl:left-12"
         />
       </div>
     </section>

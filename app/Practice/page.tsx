@@ -1,20 +1,8 @@
-"use client";
-
-import React, { useEffect, useState } from "react";
 import Header from "@/components/widgets/header";
 import Footer from "@/components/widgets/footer";
 import Image from "next/image";
 
 export default function Practice() {
-  const [isMobile, setIsMobile] = useState(false);
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 1024);
-    };
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
   return (
     <main>
       <header>
@@ -30,22 +18,22 @@ export default function Practice() {
           />
         </div>
         <article className="flex flex-col items-center font-serif">
-          <h1 className="text-2xl underline my-20 lg:text-4xl lg:my-40">
-            Ma Pratique
-          </h1>
-          <Image
-            src="/imgs/pratique.png"
-            alt="Photo du bureau de Delphine"
-            width={isMobile ? 200 : 627}
-            height={isMobile ? 163 : 508}
-            className="mb-20"
-          />
+          <h1 className="text-2xl mt-20 lg:text-4xl lg:my-40">Ma Pratique</h1>
+          <div className="w-full my-40 lg:w-3/5 xl:w-2/4">
+            <Image
+              src="/imgs/practiceDelphine.JPG"
+              alt="Photo du bureau de Delphine"
+              width={1000}
+              height={1000}
+              className="rounded-3xl w-4/5 mx-auto shadowCustom"
+            />
+          </div>
         </article>
-        <article className="flex flex-col items-center backgroundPink lg:bg-transparent">
-          <h2 className="font-serif text-2xl my-20 underline text-center z-10 lg:text-3xl">
+        <article className="flex flex-col items-center backgroundPink pb-20 xl:pb-40 lg:bg-transparent">
+          <h2 className="font-serif text-2xl my-20 text-center z-10 lg:text-3xl">
             Une approche centrée sur la personne
           </h2>
-          <div className="mb-10 font-sans bg-[#EFEFEF] bg-opacity-40 rounded-3xl sm:w-4/5 md:mb-20 lg:mb-40 lg:w-3/5 z-10">
+          <div className="mb-10 font-sans bg-[#EFEFEF] bg-opacity-40 rounded-3xl sm:w-4/5 md:mb-20 lg:mb-40 lg:w-3/5 z-10 shadowCustom">
             <div className="w-11/12 mx-auto px-2 py-8 text-sm lg:text-base">
               <p className="mb-5">
                 Pendant mon cursus universitaire et au cours de mes diverses

@@ -6,7 +6,7 @@ const MAILTO = process.env.MAILTO;
 const MAILFROM = process.env.MAILFROM;
 
 if (!SENDGRID_API_KEY || !MAILTO || !MAILFROM) {
-  throw new Error('Please define the SENDGRID_API_KEY environment variable');
+  throw new Error("Variables d'environnement manquantes");
 }
 
 sgMail.setApiKey(SENDGRID_API_KEY);
@@ -24,12 +24,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     try {
       await sgMail.send(msg);
-      res.status(200).json({ message: 'Email sent' });
+      res.status(200).json({ message: "Mail envoyé !" });
     } catch (error) {
-      console.error(error);
-      res.status(500).json({ error: 'Error sending email' });
+      res.status(500).json({ error: "Le mail n'a pas été envoyé" });
     }
   } else {
-    res.status(405).json({ error: 'Method not allowed' });
+    res.status(405).json({ error: "Methode incorrecte" });
   }
 }

@@ -32,7 +32,7 @@ export const actions: Actions[] = [
     icon: "/icons/Cemetery.svg",
     title: "Deuil",
     description:
-      "Lorem ipsum dolor sit amet consectetur. At sit tristique imperdiet proin mattis neque tincidunt pharetra. Duis aliquam non a non malesuada. At sit tristique imperdiet proin mattis neque tincidunt pharetra. Duis aliquam non a non malesuada.",
+      "Accompagnement au processus naturel de deuil: accueil et libre expression des émotions, aide à la narration et à la compréhension des événements et apport d'un soutien psychologique à travers une écoute active et une présence empathique.",
   },
   {
     id: "005",

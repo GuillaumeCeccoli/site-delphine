@@ -1,20 +1,8 @@
-"use client";
-
 import Footer from "@/components/widgets/footer";
 import Header from "@/components/widgets/header";
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
 
 export default function About() {
-  const [isMobile, setIsMobile] = useState(false);
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 1024);
-    };
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
   return (
     <main>
       <header>
@@ -30,19 +18,19 @@ export default function About() {
           />
         </div>
         <article className="flex flex-col items-center font-serif">
-          <h1 className="text-2xl underline my-20 lg:text-4xl lg:my-40">
-            Qui suis-je ?
-          </h1>
-          <Image
-            src="/imgs/about.png"
-            alt="Photo du bureau de Delphine"
-            width={isMobile ? 200 : 627}
-            height={isMobile ? 163 : 508}
-            className="mb-20 z-10"
-          />
+          <h1 className="text-2xl mt-20 lg:text-4xl lg:my-40">Qui suis-je ?</h1>
+          <div className="w-full my-40 lg:w-3/5">
+            <Image
+              src="/imgs/aboutDelphine.JPG"
+              alt="Photo du bureau de Delphine"
+              width={1000}
+              height={1000}
+              className="z-10 w-4/5 mx-auto rounded-3xl shadowCustom"
+            />
+          </div>
         </article>
-        <article className="flex flex-col items-center backgroundPink lg:bg-transparent xl:flex-row xl:justify-between items-centers xl:mx-5 xl:pb-40">
-          <div className="font-sans bg-[#EFEFEF] bg-opacity-40 my-10 rounded-3xl sm:w-4/5 md:mb-20 lg:mb-10 lg:w-3/5 z-10 xl:mx-5">
+        <article className="flex flex-col items-center backgroundPink pb-20 lg:bg-transparent xl:flex-row xl:justify-between items-centers xl:mx-5 xl:pb-40">
+          <div className="font-sans bg-[#EFEFEF] bg-opacity-40 my-10 rounded-3xl sm:w-4/5 md:mb-20 lg:mb-10 lg:w-3/5 z-10 xl:mx-5 shadowCustom">
             <div className="w-11/12 m-auto px-2 py-8 text-sm lg:text-base xl:h-[520px] flex items-center">
               <p>
                 Psychologue d&apos;approche humaniste, ma mission est de vous
@@ -65,7 +53,7 @@ export default function About() {
               </p>
             </div>
           </div>
-          <div className="font-sans bg-[#EFEFEF] bg-opacity-40 my-10 rounded-3xl sm:w-4/5 md:mb-20 lg:mb-10 lg:w-3/5 z-10">
+          <div className="font-sans bg-[#EFEFEF] bg-opacity-40 my-10 rounded-3xl sm:w-4/5 md:mb-20 lg:mb-10 lg:w-3/5 z-10 shadowCustom">
             <div className="w-11/12 m-auto px-2 py-8 text-sm lg:text-base xl:h-[520px] flex items-center">
               <p>
                 Ayant principalement évolué en addictologie et en psychiatrie
@@ -84,7 +72,7 @@ export default function About() {
               </p>
             </div>
           </div>
-          <div className="font-sans bg-[#EFEFEF] bg-opacity-40 my-10 rounded-3xl sm:w-4/5 md:mb-20 lg:mb-10 lg:w-3/5 z-10 xl:mx-5">
+          <div className="font-sans bg-[#EFEFEF] bg-opacity-40 my-10 rounded-3xl sm:w-4/5 md:mb-20 lg:mb-10 lg:w-3/5 z-10 xl:mx-5 shadowCustom">
             <div className="w-11/12 m-auto px-2 py-8 text-sm lg:text-base xl:h-[520px] flex items-center">
               <p>
                 Installée en libéral depuis septembre 2020 aux Pennes-Mirabeau,
