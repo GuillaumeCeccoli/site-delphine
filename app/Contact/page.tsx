@@ -73,11 +73,6 @@ const FormFieldComponent: React.FC<FormFieldComponenentsProps> = ({
   />
 );
 
-export const metadata: Metadata = {
-  title: "Delphine Ceccoli - Contact",
-  description: "Contactez Delphine Ceccoli - psychologue aux Pennes-Mirabeau",
-};
-
 export default function Contact() {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
