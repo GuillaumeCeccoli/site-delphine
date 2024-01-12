@@ -1,10 +1,16 @@
 import Footer from "@/components/widgets/footer";
 import Header from "@/components/widgets/header";
 import Image from "next/image";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Delphine Ceccoli - Qui-suis-je ?",
+  description: "Apprenez à me connaître au travers de cette page.",
+};
 
 export default function About() {
   return (
-    <main>
+    <section>
       <header>
         <Header />
       </header>
@@ -92,7 +98,7 @@ export default function About() {
       <footer>
         <Footer />
       </footer>
-    </main>
+    </section>
   );
 }
 

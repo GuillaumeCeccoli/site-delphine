@@ -1,10 +1,16 @@
 import Header from "@/components/widgets/header";
 import Footer from "@/components/widgets/footer";
 import Image from "next/image";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Delphine Ceccoli - Ma pratique",
+  description: "Décrouvrez ma pratique au travers de cette page.",
+};
 
 export default function Practice() {
   return (
-    <main>
+    <section>
       <header>
         <Header />
       </header>
@@ -81,7 +87,7 @@ export default function Practice() {
       <footer>
         <Footer />
       </footer>
-    </main>
+    </section>
   );
 }
 

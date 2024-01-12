@@ -20,6 +20,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Header from "@/components/widgets/header";
 import Footer from "@/components/widgets/footer";
+import type { Metadata } from "next";
 
 const formSchema = z.object({
   username: z
@@ -72,6 +73,11 @@ const FormFieldComponent: React.FC<FormFieldComponenentsProps> = ({
   />
 );
 
+export const metadata: Metadata = {
+  title: "Delphine Ceccoli - Contact",
+  description: "Contactez Delphine Ceccoli - psychologue aux Pennes-Mirabeau",
+};
+
 export default function Contact() {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -118,9 +124,9 @@ export default function Contact() {
         <Header />
       </header>
       <div className="flex flex-col items-center justify-center my-10">
-        <h2 className="text-2xl mt-10 font-serif lg:text-4xl">
+        <h1 className="text-2xl mt-10 font-serif lg:text-4xl">
           Où me trouver ?
-        </h2>
+        </h1>
         <div className="w-full flex flex-col items-center justify-center my-20">
           <div className="w-full font-sans flex flex-col items-center md:flex-row md:justify-around">
             <div className="w-4/5 my-10 overflow-hidden rounded-2xl md:w-2/5 mb-20 shadowCustom">
