@@ -4,19 +4,21 @@ import Image from "next/image";
 export default function Approach() {
   return (
     <section className="w-full relative backgroundPink flex flex-col items-center justify-center xl:flex-row-reverse xl:justify-around overflow-hidden border-b border-gray-400">
-      <Image
-        src="/imgs/delphineTravail.png"
-        alt="Une photo de Delphine entrain de travailler."
-        width={300}
-        height={300}
-        className="flex flex-col mb-10 mt-20 2xl:mr-32 xl:mt-10 xl:mr-20 z-10 shadowCustom rounded-full"
-      />
+      <div className="mb-10 mt-20 2xl:mr-32 xl:mt-10 xl:mr-40 w-4/5">
+        <Image
+          src="/imgs/delphineTravail.png"
+          alt="Une photo de Delphine entrain de travailler."
+          width={500}
+          height={500}
+          className="xl:w-full shadowCustom rounded-full mx-auto"
+        />
+      </div>
       <div className="flex flex-col items-center 2xl:items-start 2xl:mx-20">
         <h2 className="font-serif text-2xl my-20 md:text-3xl xl:self-center xl:ml-96">
           Une approche humaniste
         </h2>
-        <div className="mb-32 md:w-4/5 2xl:w-9/12 2xl:ml-20 z-10 bg-[#FAFAFA] bg-opacity-25 p-8 rounded-3xl shadowCustom">
-          <div className="font-sans xl:m-auto xl:text-xl">
+        <div className="mb-32 md:w-4/5 xl:w-3/5 2xl:w-9/12 2xl:ml-20 z-10 bg-[#FAFAFA] bg-opacity-25 p-8 rounded-3xl shadowCustom">
+          <div className="font-sans xl:m-auto xl:text-md">
             <p>
               Ma pratique s’inscrit dans une approche existentielle-humaniste.
               Cette orientation part du postulat que tout individu porte en
