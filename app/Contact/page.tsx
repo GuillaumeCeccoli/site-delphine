@@ -20,7 +20,6 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Header from "@/components/widgets/header";
 import Footer from "@/components/widgets/footer";
-import type { Metadata } from "next";
 
 const formSchema = z.object({
   username: z
