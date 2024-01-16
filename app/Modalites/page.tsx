@@ -2,6 +2,7 @@ import Header from "@/components/widgets/header";
 import Footer from "@/components/widgets/footer";
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Modalites() {
   return (
@@ -12,9 +13,17 @@ export default function Modalites() {
           <h1 className="font-serif text-2xl text-center w-11/12 mt-10 font-bold">
             Modalités, tarifs et déroulement d&apos;une séance.
           </h1>
-
+          <div className="w-4/5 overflow-hidden rounded-3xl mt-20 shadowCustom lg:w-3/5 xl:w-2/5">
+            <Image
+              src="/imgs/modalite.JPG"
+              alt="Une photo du bureau de Delphine"
+              width={1000}
+              height={1000}
+              className="w-full object-cover"
+            />
+          </div>
           <div className="flex flex-col items-center my-20 w-full sm:w-11/12 lg:w-9/12 xl:flex-row xl:justify-evenly xl:items-start xl:w-10/12 gap-20">
-            <div className="bg-[#EFEFEF] bg-opacity-60 p-4 font-sans flex flex-col gap-5 rounded-3xl lg:p-10 xl:w-3/5">
+            <div className="bg-[#EFEFEF] bg-opacity-60 p-4 font-sans flex flex-col gap-5 rounded-3xl lg:p-10 xl:w-3/5 shadowCustom">
               <h2 className="text-xl my-2 text-center font-serif">
                 <strong>Modalités & Tarifs</strong>
               </h2>
@@ -57,7 +66,7 @@ export default function Modalites() {
                 charge.
               </p>
             </div>
-            <section className="flex flex-col items-center backgroundPink bg-opacity-40 rounded-3xl mt-20 p-4 lg:p-10 xl:w-3/5 xl:mt-0">
+            <section className="flex flex-col items-center backgroundPink bg-opacity-40 rounded-3xl mt-20 p-4 lg:p-10 xl:w-3/5 xl:mt-0 shadowCustom">
               <h2 className="text-xl mt-4 mb-8 font-serif">
                 <strong>Déroulement des consultations :</strong>
               </h2>
