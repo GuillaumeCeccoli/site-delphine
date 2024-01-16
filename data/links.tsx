@@ -16,6 +16,10 @@ export const headerLinks: Links[] = [
     name: "Ma pratique",
     href: "/Practice",
   },
+  {
+    name: "Modalités et Tarifs",
+    href: "/Modalites",
+  },
   /*   {
     name: "Blog",
     href: "/",

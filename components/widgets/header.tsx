@@ -16,12 +16,12 @@ export default function Header() {
   const { links, socialLinks } = useLinks();
   return (
     <header className="flex flex-row justify-between items-center backgroundPink h-[100px] relative border-b border-gray-400">
-      <div className="md:hidden">
+      <div className="lg:hidden">
         <Sheet>
           <SheetTrigger>
             <Menu color="black" size={50} className="m-2" />
           </SheetTrigger>
-          <SheetContent className="absolute right-0 top-0 h-[220px] w-3/5 backgroundPink">
+          <SheetContent className="absolute right-0 top-0 h-screen w-3/5 backgroundPink">
             <SheetHeader>
               <SheetDescription className="flex flex-col items-start">
                 {links.map((link, index) => (
@@ -38,7 +38,7 @@ export default function Header() {
           </SheetContent>
         </Sheet>
       </div>
-      <div className="hidden md:flex md:flex-row md:items-center justify-between md:w-2/4 md:m-10 md:text-xl xl:w-2/5 2xl:w-1/4 2xl:ml-20">
+      <div className="hidden lg:flex lg:flex-row lg:items-center lg:justify-around lg:text-base xl:text-xl lg:w-1/2 xl:w-2/5 2xl:w-2/6 2xl:ml-20">
         {links.map((link, index) => (
           <Link
             key={index}
