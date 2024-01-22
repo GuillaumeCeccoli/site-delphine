@@ -1,9 +1,10 @@
-import Banner from "@/components/widgets/banner";
-import Header from "@/components/widgets/header";
+"use client";
 import Activities from "@/components/widgets/activities";
-import Citation from "@/components/widgets/citation";
 import Approach from "@/components/widgets/approche";
+import Banner from "@/components/widgets/banner";
+import Citation from "@/components/widgets/citation";
 import Footer from "@/components/widgets/footer";
+import Header from "@/components/widgets/header";
 
 export default function Home() {
   return (

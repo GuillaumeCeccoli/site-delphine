@@ -1,5 +1,5 @@
-import React from "react";
 import Image from "next/image";
+import React from "react";
 
 export default function Approach() {
   return (
@@ -11,6 +11,7 @@ export default function Approach() {
           width={500}
           height={500}
           className="xl:w-full shadowCustom rounded-full mx-auto"
+          onContextMenu={(e: React.MouseEvent) => e.preventDefault()}
         />
       </div>
       <div className="flex flex-col items-center 2xl:items-start 2xl:mx-20">
@@ -64,6 +65,7 @@ export default function Approach() {
           width={380}
           height={436}
           className="xl:absolute xl:bottom-0 xl:left-12"
+          onContextMenu={(e: React.MouseEvent) => e.preventDefault()}
         />
       </div>
     </section>

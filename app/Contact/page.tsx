@@ -1,10 +1,5 @@
 "use client";
 
-import React from "react";
-import Image from "next/image";
-import * as z from "zod";
-import { useForm, Control } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
 import {
   Form,
   FormControl,
@@ -13,13 +8,18 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
-import { Input } from "../../components/ui/input";
-import { Textarea } from "../../components/ui/textarea";
-import { Button } from "../../components/ui/button";
+import Footer from "@/components/widgets/footer";
+import Header from "@/components/widgets/header";
+import { zodResolver } from "@hookform/resolvers/zod";
+import Image from "next/image";
+import React from "react";
+import { Control, useForm } from "react-hook-form";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Header from "@/components/widgets/header";
-import Footer from "@/components/widgets/footer";
+import * as z from "zod";
+import { Button } from "../../components/ui/button";
+import { Input } from "../../components/ui/input";
+import { Textarea } from "../../components/ui/textarea";
 
 const formSchema = z.object({
   username: z
@@ -130,6 +130,7 @@ export default function Contact() {
                 width={1000}
                 height={1000}
                 className="object-cover"
+                onContextMenu={(e: React.MouseEvent) => e.preventDefault()}
               />
             </div>
             <div className="w-4/5 flex flex-col items-start p-3 bg-[#EFEFEF] bg-opacity-60 rounded-xl md:w-2/5 lg:text-xl lg:p-6 shadowCustonReverse">
@@ -163,6 +164,7 @@ export default function Contact() {
               width={1000}
               height={1000}
               className="w-full object-cover"
+              onContextMenu={(e: React.MouseEvent) => e.preventDefault()}
             />
           </div>
           <div className="w-4/5 font-sans my-16 md:w-3/5 lg:w-2/5 xl:text-lg">

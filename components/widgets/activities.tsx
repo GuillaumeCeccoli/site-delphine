@@ -1,10 +1,9 @@
 "use client";
 
-import React from "react";
-import { Card, CardContent } from "../ui/card";
 import Image from "next/image";
+import React, { useState } from "react";
 import { actions } from "../../data/actionsData";
-import { useState } from "react";
+import { Card, CardContent } from "../ui/card";
 
 export default function Activities() {
   const [selectedActions, setSelectedActions] = useState<string[]>([]);
@@ -48,6 +47,7 @@ export default function Activities() {
                   height={80}
                   className="py-2"
                   title="Cliquez pour en savoir plus"
+                  onContextMenu={(e: React.MouseEvent) => e.preventDefault()}
                 />
                 <h2 className="font-serif text-center py-5 text-2xl">
                   {action.title}

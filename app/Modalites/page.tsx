@@ -1,8 +1,9 @@
-import Header from "@/components/widgets/header";
+"use client";
 import Footer from "@/components/widgets/footer";
-import React from "react";
-import Link from "next/link";
+import Header from "@/components/widgets/header";
 import Image from "next/image";
+import Link from "next/link";
+import React from "react";
 
 export default function Modalites() {
   return (
@@ -20,6 +21,7 @@ export default function Modalites() {
               width={1000}
               height={1000}
               className="w-full object-cover"
+              onContextMenu={(e: React.MouseEvent) => e.preventDefault()}
             />
           </div>
           <div className="flex flex-col items-center my-20 w-full sm:w-11/12 lg:w-9/12 xl:flex-row xl:justify-evenly xl:items-start xl:w-10/12 gap-20">

@@ -1,6 +1,6 @@
-import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import React from "react";
 import { useLinks } from "./useLinks";
 
 function Footer() {
@@ -15,6 +15,7 @@ function Footer() {
             width={500}
             height={500}
             className="object-cover w-full"
+            onContextMenu={(e: React.MouseEvent) => e.preventDefault()}
           />
         </div>
         <div className="ml-5 flex flex-col">
@@ -39,7 +40,13 @@ function Footer() {
               className="scale-on-hover sm:mx-2 md:mx-4"
             >
               {link.src ? (
-                <Image src={link.src} alt={link.name} width={40} height={40} />
+                <Image
+                  src={link.src}
+                  alt={link.name}
+                  width={40}
+                  height={40}
+                  onContextMenu={(e: React.MouseEvent) => e.preventDefault()}
+                />
               ) : null}
             </Link>
           ))}

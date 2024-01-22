@@ -41,7 +41,13 @@ export default function Banner() {
   return (
     <section className="flex items-center flex-col w-full h-[400px] backgroundLightGrey md:flex-row md:justify-between xl:flex-row xl:justify-between lg:h-[500px] xl:items-start xl:overflow-hidden border-b border-gray-400">
       <div className="hidden xl:block xl:relative xl:top-20 left-[5%]">
-        <Image src="/icons/Arbre.svg" alt="Un arbre" width={380} height={436} />
+        <Image
+          src="/icons/Arbre.svg"
+          alt="Un arbre"
+          width={380}
+          height={436}
+          onContextMenu={(e: React.MouseEvent) => e.preventDefault()}
+        />
       </div>
       <div className="flex items-center flex-col mt-6 justify-center md:ml-16 xl:mt-40 xl:mr-40">
         <h1 className="text-2xl font-serif lg:text-3xl 2xl:text-4xl">
@@ -60,6 +66,7 @@ export default function Banner() {
             width={isMobile ? photo.width : photo.width * 2}
             height={isMobile ? photo.height : photo.height * 2}
             className={`imageClass ${photo.className}`}
+            onContextMenu={(e: React.MouseEvent) => e.preventDefault()}
           />
         ))}
       </div>

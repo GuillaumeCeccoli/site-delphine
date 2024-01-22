@@ -1,12 +1,7 @@
-import Header from "@/components/widgets/header";
+"use client";
 import Footer from "@/components/widgets/footer";
+import Header from "@/components/widgets/header";
 import Image from "next/image";
-import type { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Delphine Ceccoli - Ma pratique",
-  description: "Décrouvrez ma pratique au travers de cette page.",
-};
 
 export default function Practice() {
   return (
@@ -21,6 +16,7 @@ export default function Practice() {
             alt="Un arbre"
             width={750}
             height={864}
+            onContextMenu={(e: React.MouseEvent) => e.preventDefault()}
           />
         </div>
         <article className="flex flex-col items-center font-serif">
@@ -32,6 +28,7 @@ export default function Practice() {
               width={1000}
               height={1000}
               className="rounded-3xl w-4/5 mx-auto shadowCustom"
+              onContextMenu={(e: React.MouseEvent) => e.preventDefault()}
             />
           </div>
         </article>

@@ -1,12 +1,7 @@
+"use client";
 import Footer from "@/components/widgets/footer";
 import Header from "@/components/widgets/header";
 import Image from "next/image";
-import type { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Delphine Ceccoli - Qui-suis-je ?",
-  description: "Apprenez à me connaître au travers de cette page.",
-};
 
 export default function About() {
   return (
@@ -21,6 +16,7 @@ export default function About() {
             alt="Un arbre"
             width={600}
             height={714}
+            onContextMenu={(e: React.MouseEvent) => e.preventDefault()}
           />
         </div>
         <article className="flex flex-col items-center font-serif">
@@ -32,6 +28,7 @@ export default function About() {
               width={1000}
               height={1000}
               className="z-10 w-4/5 mx-auto rounded-3xl shadowCustom"
+              onContextMenu={(e: React.MouseEvent) => e.preventDefault()}
             />
           </div>
         </article>
