@@ -14,15 +14,27 @@ export default function Modalites() {
           <h1 className="font-serif text-2xl text-center w-11/12 mt-10 font-bold">
             Modalités, tarifs et déroulement d&apos;une séance.
           </h1>
-          <div className="w-4/5 overflow-hidden rounded-3xl mt-20 shadowCustom lg:w-3/5 xl:w-2/5">
-            <Image
-              src="/imgs/modalite.JPG"
-              alt="Une photo du bureau de Delphine"
-              width={1000}
-              height={1000}
-              className="w-full object-cover"
-              onContextMenu={(e: React.MouseEvent) => e.preventDefault()}
-            />
+          <div className="w-full flex flex-col items-center xl:flex-row xl:justify-around xl:w-11/12">
+            <div className="w-4/5 overflow-hidden rounded-3xl mt-20 shadowCustom lg:w-3/5 xl:w-2/5">
+              <Image
+                src="/imgs/attente-modalite.JPG"
+                alt="La salle d'attente du cabinet de Delphine"
+                width={600}
+                height={714}
+                className="w-full object-cover"
+                onContextMenu={(e: React.MouseEvent) => e.preventDefault()}
+              />
+            </div>
+            <div className="w-4/5 overflow-hidden rounded-3xl mt-20 shadowCustom lg:w-3/5 xl:w-2/5">
+              <Image
+                src="/imgs/modalite.JPG"
+                alt="Une photo du bureau de Delphine"
+                width={1000}
+                height={1000}
+                className="w-full object-cover"
+                onContextMenu={(e: React.MouseEvent) => e.preventDefault()}
+              />
+            </div>
           </div>
           <div className="flex flex-col items-center my-20 w-full sm:w-11/12 lg:w-9/12 xl:flex-row xl:justify-evenly xl:items-start xl:w-10/12 gap-20">
             <div className="bg-[#EFEFEF] bg-opacity-60 p-4 font-sans flex flex-col gap-5 rounded-3xl lg:p-10 xl:w-3/5 shadowCustom">

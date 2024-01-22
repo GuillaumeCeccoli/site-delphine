@@ -8,16 +8,14 @@ function Footer() {
   return (
     <footer className="flex flex-col my-10">
       <div className="flex flex-col sm:flex-row sm:justify-between lg:items-center">
-        <div className="hidden lg:w-[10%] lg:overflow-hidden lg:inline lg:ml-10 lg:my-10 2xl:ml-20 rounded-full shadowCustom">
-          <Image
-            src="/imgs/footerImg.png"
-            alt="Photo de la salle d'attente du cabinet."
-            width={500}
-            height={500}
-            className="object-cover w-full"
-            onContextMenu={(e: React.MouseEvent) => e.preventDefault()}
-          />
-        </div>
+        <Image
+          src="/imgs/logo.svg"
+          alt="Photo de la salle d'attente du cabinet."
+          width={100}
+          height={100}
+          className="w-1/5 drop-shadow-lg"
+          onContextMenu={(e: React.MouseEvent) => e.preventDefault()}
+        />
         <div className="ml-5 flex flex-col">
           <h3 className="font-serif underline text-xl">Où me trouver ?</h3>
           <div className="flex flex-col font-sans my-6 space-y-2">
@@ -30,6 +28,9 @@ function Footer() {
             <p>
               <strong>Mail:</strong> delphine.ceccoli@laposte.net
             </p>
+            <Link href="/" className="text-pink-500">
+              Mentions légales
+            </Link>
           </div>
         </div>
         <div className="flex flex-row justify-between mx-auto my-10 items-center w-1/2 sm:w-1/4 sm:mx-0 md:w-1/4 lg:mr-5 lg:w-1/5 xl:w-1/6 2xl:mr-10 2xl:justify-center">
