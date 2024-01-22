@@ -38,7 +38,7 @@ export default function Header() {
           </SheetContent>
         </Sheet>
       </div>
-      <div className="hidden lg:flex lg:flex-row lg:items-center lg:justify-around lg:text-base xl:text-xl lg:w-1/2 xl:w-2/5 2xl:w-2/6 2xl:ml-20">
+      <div className="hidden lg:flex lg:flex-row lg:items-center lg:justify-around lg:text-base xl:text-base lg:w-1/2 xl:w-2/5 2xl:w-2/6 2xl:ml-20">
         {links.map((link, index) => (
           <Link
             key={index}
