@@ -1,5 +1,6 @@
+import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
-import { Roboto, Gabriela } from "next/font/google";
+import { Gabriela, Roboto } from "next/font/google";
 import "./globals.css";
 
 const roboto = Roboto({
@@ -28,6 +29,7 @@ export default function RootLayout({
     <html lang="fr-FR">
       <body className={`${roboto.variable} ${gabriela.variable}`}>
         {children}
+        <Analytics />
       </body>
     </html>
   );
