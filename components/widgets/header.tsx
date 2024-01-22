@@ -2,7 +2,6 @@
 import { Menu } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 import {
   Sheet,
   SheetContent,
@@ -54,13 +53,7 @@ export default function Header() {
           {socialLinks.map((link, index) => (
             <Link key={index} href={link.href} className="scale-on-hover">
               {link.src ? (
-                <Image
-                  src={link.src}
-                  alt={link.alt}
-                  width={40}
-                  height={40}
-                  onContextMenu={(e: React.MouseEvent) => e.preventDefault()}
-                />
+                <Image src={link.src} alt={link.alt} width={40} height={40} />
               ) : null}
             </Link>
           ))}
