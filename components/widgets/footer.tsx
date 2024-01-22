@@ -13,10 +13,10 @@ function Footer() {
           alt="Photo de la salle d'attente du cabinet."
           width={100}
           height={100}
-          className="w-1/5 drop-shadow-lg"
+          className="hidden lg:block lg:w-1/5 lg:drop-shadow-lg"
           onContextMenu={(e: React.MouseEvent) => e.preventDefault()}
         />
-        <div className="ml-5 flex flex-col">
+        <div className="ml-5 flex flex-col gap-5">
           <h3 className="font-serif underline text-xl">Où me trouver ?</h3>
           <div className="flex flex-col font-sans my-6 space-y-2">
             <p>Cabinet médical le Vento</p>
@@ -28,7 +28,7 @@ function Footer() {
             <p>
               <strong>Mail:</strong> delphine.ceccoli@laposte.net
             </p>
-            <Link href="/" className="text-pink-500">
+            <Link href="/Mentions" className="text-pink-500">
               Mentions légales
             </Link>
           </div>
