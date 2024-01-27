@@ -1,6 +1,7 @@
 "use client";
 import Footer from "@/components/widgets/footer";
 import Header from "@/components/widgets/header";
+import Link from "next/link";
 
 export default function Mentions() {
   return (
@@ -35,6 +36,12 @@ export default function Mentions() {
           <p>Guillaume Ceccoli</p>
           <p>86 Chemin de la muraille neuve</p>
           <p>04230 Saint-Etienne-Les-Orgues</p>
+          <Link
+            href="https://www.creanumerik04-gc.fr/"
+            className="text-purple-500"
+          >
+            Site web du créateur
+          </Link>
           <p>
             <strong>Téléphone : </strong>06 75 97 31 18
           </p>
