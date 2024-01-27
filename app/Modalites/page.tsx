@@ -113,7 +113,7 @@ export default function Modalites() {
                 <p className="pb-8">
                   Il est impossible de savoir à l’avance combien de temps durera
                   le suivi psychologique. La durée varie en fonction de
-                  plusieurs facteurs : la demande initiale, les objectifs de
+                  plusieurs facteurs: la demande initiale, les objectifs de
                   travail, le rythme de cheminement de chacun etc.
                 </p>
               </div>
